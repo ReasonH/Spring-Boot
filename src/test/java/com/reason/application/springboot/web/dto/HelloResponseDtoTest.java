@@ -13,6 +13,7 @@ public class HelloResponseDtoTest {
         //when
         HelloResponseDto dto = new HelloResponseDto(name, amount);
         //then
+        // 메소드 검증, name과 getName 결과가 같은가?
         assertThat(dto.getName()).isEqualTo(name);
         assertThat(dto.getAmount()).isEqualTo(amount);
     }
