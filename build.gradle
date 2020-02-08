@@ -38,5 +38,6 @@ dependencies { // 프로젝트 개발 필요 의존성 선언
     // JPA 테스트, 로컬 환경 구동에 사용 -> 인메모리 관계형 DB
     compile('com.h2database:h2')
     // ext 전역변수 버전을 따라가기 위해서는 이곳에 버전을 명시하지 않는다
+    compile('org.springframework.boot:spring-boot-starter-mustache')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

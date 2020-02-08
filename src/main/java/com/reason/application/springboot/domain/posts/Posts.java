@@ -41,6 +41,6 @@ public class Posts extends BaseTimeEntity {
 }
 
 /*
-    롬복 어노테이션은 entity 클래스 변경 발생 시
+    lombok 어노테이션은 entity 클래스 변경 발생 시
     코드 변경을 최소화시킨다.
  */
