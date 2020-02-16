@@ -1,5 +1,6 @@
 package com.reason.application.springboot.web;
 
+import com.reason.application.springboot.config.auth.LoginUser;
 import com.reason.application.springboot.config.auth.dto.SessionUser;
 import com.reason.application.springboot.domain.user.User;
 import com.reason.application.springboot.service.PostsService;
@@ -17,15 +18,13 @@ import javax.servlet.http.HttpSession;
 public class IndexController {
 
     private final PostsService postsService;
-    private final HttpSession httpSession;
+//    private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts", postsService.findAllDesc());
-        SessionUser user = (SessionUser) httpSession
-                .getAttribute("user");
         if (user != null) {
-            model.addAttribute("userName", user.getName());
+            model.addAttribute("loginUserName", user.getName());
         }
         return "index";
     }
