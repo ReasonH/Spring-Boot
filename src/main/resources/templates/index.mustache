@@ -13,7 +13,9 @@
             {{/loginUserName}}
             {{^loginUserName}}
                 <a href="/oauth2/authorization/google"
-                class="btn btn-success active" role="button">Google Login</a>
+                    class="btn btn-success active" role="button">Google Login</a>
+                <a href="/oauth2/authorization/naver"
+                    class="btn btn-secondary active" role="button">Naver Login</a>
             {{/loginUserName}}<!-- spring security 기본 login url, 별도 컨트롤러 x-->
         </div>
     </div>
