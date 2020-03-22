@@ -1,7 +1,8 @@
-## 스프링 부트와 AWS로 구현하는 웹 서비스
+## 스프링 부트와 AWS로 구현하는 웹 서비스 [![Build Status](https://travis-ci.org/ReasonH/Spring-Boot.svg?branch=master)](https://travis-ci.org/ReasonH/Spring-Boot)
 
 ---
 [스프링 부트와 AWS로 혼자 구현하는 웹 서비스](https://github.com/jojoldu/freelec-springboot2-webservice) 책을 통해 만들어보는 게시판 서비스
+
 
 개발환경은 다음과 같습니다.
 
