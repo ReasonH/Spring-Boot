@@ -2,7 +2,7 @@ version: 0.0 # codedeploy version, 다른버전 사용시 오류발생
 os: linux
 files:
   - source: / # codedeploy가 전달한 파일 중 destination 이동 대상 지정
-    destination: /home/ec2-user/app/step2/zip/ # source에 지정된 파일 받을 위치
+    destination: /home/ec2-user/app/step2/zip/ # source에 지정된 파일을 받을 위치
     overwrite: yes # overwrite 옵션
 
 # Codedeploy에서 EC2서버로 넘겨준 파일들 모두 ec2-user 권한을 갖도록 함
