@@ -50,3 +50,18 @@ Cloud 환경
 5. 배포가 끝난 후 스프링 부트2의 정상 구동 확인
 6. 스프링 부트2가 정상 구동 중이면 Nginx가 8082를 바라보도록 함
 7. Nginx 리로드는 0.1초 이내로 완료됨
+
+#### 수정 사항
+
+- nginx 설치 및 `etc/nginx/nginx.conf` 셋팅
+- 무중단 배포 위한 profile 추가 및 controller, test, config 작성
+- 
+
+#### 무중단 배포 구성 스크립트
+
+- `stop.sh`: 실행 중이던 스프링 부트 종료
+- `start.sh`: 배포할 신규 버전 스프링 부트 프로젝트를 `stop.sh`로 종료한 'profile'로 실행
+- `health.sh`: `start.sh`로 실행시킨 프로젝트가 정상 실행됐는지 체크
+- `switch.sh`: 엔진엑스가 바라보는 스프링 부트를 최신 버전으로 변경
+- `profile.sh`: 앞선 4개 스크립트 파일에서 공용으로 사용할 'profile'과 체크 로직
+
